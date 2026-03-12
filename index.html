@@ -1,15 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Auto Bien - Reservas</title>
-    <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
-        iframe { border: none; width: 100%; height: 100%; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Auto Bien - Reservas</title>
+
+<style>
+html, body{
+margin:0;
+padding:0;
+height:100%;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.booking-frame{
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:50px;
+}
+
+.booking-frame iframe{
+border:none;
+width:100%;
+height:100%;
+}
+
+.legal-bar{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#111;
+color:#fff;
+text-align:center;
+padding:12px 10px;
+font-size:14px;
+box-sizing:border-box;
+}
+
+.legal-bar a{
+color:#ffd54f;
+text-decoration:none;
+margin:0 8px;
+font-weight:600;
+}
+
+.legal-bar a:hover{
+text-decoration:underline;
+}
+</style>
 </head>
+
 <body>
-    <iframe src="https://miautobien.setmore.com" allowfullscreen></iframe>
+
+<div class="booking-frame">
+<iframe src="https://miautobien.setmore.com" allowfullscreen></iframe>
+</div>
+
+<div class="legal-bar">
+Al continuar usted acepta nuestros
+<a href="https://express-booking.vercel.app/terminos" target="_blank" rel="noopener noreferrer">Términos</a> |
+<a href="https://express-booking.vercel.app/privacidad" target="_blank" rel="noopener noreferrer">Privacidad</a> |
+<a href="https://express-booking.vercel.app/reembolsos" target="_blank" rel="noopener noreferrer">Reembolsos</a> |
+<a href="https://express-booking.vercel.app/cancelaciones" target="_blank" rel="noopener noreferrer">Cancelaciones</a>
+</div>
+
 </body>
 </html>
